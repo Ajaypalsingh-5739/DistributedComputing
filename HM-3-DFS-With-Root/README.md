@@ -14,4 +14,9 @@ Make sure that JDK and JRE are installed in your system.
 On executing the Main Program the program will ask to pick the root processor based on the ID. (Graph is based on the structure provided in the class / shown below).
 
 <h1>Graph Used For Program</h1>
+
 ![Alt text](Graph.jpg?raw=true "Graph")
+
+<h1>Sample Output</h1>
+
+![Alt text](Sample_output.jpg?raw=true "Graph")
