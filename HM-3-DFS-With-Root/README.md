@@ -1,11 +1,11 @@
-Prerequisites: 
+<h1>Prerequisites</h1> 
 Make sure that JDK and JRE are installed in your system.
 
-Method1
+<h1>Method1</h1>
 1) Compile all the files in the src folder using javac *.java
 2) Run the main file using java Main
 
-Method2
+<h1>Method2</h1>
 1) Create a new Java project in your IDE (example eclipse)
 2) Copy all the .java files from src folder into default package of the project created.
 3) Run the Main java file.
