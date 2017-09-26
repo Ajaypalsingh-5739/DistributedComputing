@@ -19,4 +19,4 @@ On executing the Main Program the program will ask to pick the root processor ba
 
 <h1>Sample Output</h1>
 
-![Alt text](Sample_output.jpg?raw=true "Graph")
+![Alt text](Sample_output.jpg?raw=true "Output")
