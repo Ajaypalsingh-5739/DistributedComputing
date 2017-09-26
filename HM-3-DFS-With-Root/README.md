@@ -6,9 +6,9 @@ Make sure that JDK and JRE are installed in your system.
 2) Run the main file using java Main
 
 <h1>Method2</h1>
-1) Create a new Java project in your IDE (example eclipse)
-2) Copy all the .java files from src folder into default package of the project created.
-3) Run the Main java file.
+1) Create a new Java project in your IDE (example eclipse)</br>
+2) Copy all the .java files from src folder into default package of the project created.</br>
+3) Run the Main java file.</br>
 
 
 On executing the Main Program the program will ask to pick the root processor based on the ID. (Graph is based on the structure provided in the class / shown below).
