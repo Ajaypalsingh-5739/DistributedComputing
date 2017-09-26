@@ -2,7 +2,7 @@
 Make sure that JDK and JRE are installed in your system.
 
 <h1>Method1</h1>
-1) Compile all the files in the src folder using javac *.java
+1) Compile all the files in the src folder using javac *.java</br>
 2) Run the main file using java Main
 
 <h1>Method2</h1>
