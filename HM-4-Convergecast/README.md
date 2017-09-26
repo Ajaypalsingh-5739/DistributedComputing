@@ -25,4 +25,4 @@ Convergecast-List-of-Values contains the code for second part to Question 1</br>
 
 <h1>Sample Output for Convergecast-List-of-Values</h1>
 
-![Alt text](Output_Q1b.JPG?raw=true "Output 1")
+![Alt text](Output_Q1b.JPG?raw=true "Output 2")
