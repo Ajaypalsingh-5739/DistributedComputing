@@ -17,7 +17,7 @@ Convergecast-List-of-Values contains the code for second part to Question 1</br>
 
 <h1>Tree Used For Program</h1>
 
-![Alt text](Binary_tree.svg?raw=true "Tree")
+![Alt text](Binary_tree.png?raw=true "Tree")
 
 <h1>Sample Output for Convergecast-Max-Values</h1>
 
