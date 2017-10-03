@@ -12,16 +12,16 @@
 ![Alt text](Sequence_Diagram.jpeg?raw=true "Sequence Diagram")
 
 <h1>How to work around with Code</h1>
-Create an execution Plan for a Processor in a file and save it. 
-Currently there are only two type of events supported
-1) COMPUTATION EVENT: For a computation event just write C (in CAPITAL) for that Processor
-2) SEND EVENT: For a send event write S <processer_id_of_receiver> (in CAPITAL). For example in order to simulate a send event to Processor 2, write S 2.
+Create an execution Plan for a Processor in a file and save it.</br> 
+Currently there are only two type of events supported.</br>
+1) COMPUTATION EVENT: For a computation event just write C (in CAPITAL) for that Processor</br>
+2) SEND EVENT: For a send event write S <processer_id_of_receiver> (in CAPITAL). For example in order to simulate a send event to Processor 2, write S 2.</br>
 
-Once you have created execution plans for each processor, run the main.java file from the src folder.
+Once you have created execution plans for each processor, run the main.java file from the src folder.</br>
 On execution it will ask you to input the number of processors and the name of the files containing their execution plans.</br></br>
 
-Since all the processors are simulated to run individually in their own threads, the execution timeline for each Processor may vary. 
-The store output will show the vector clocks as they were updated for each processor and it provides intuition of the order in which the execution plan at each processor may occur.
+Since all the processors are simulated to run individually in their own threads, the execution timeline for each Processor may vary. </br>
+The store output will show the vector clocks as they were updated for each processor and it provides intuition of the order in which the execution plan at each processor may occur.</br>
 
 <h1>SAMPLE OUTPUT</h1>
 
