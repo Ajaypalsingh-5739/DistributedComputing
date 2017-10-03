@@ -46,8 +46,8 @@ public class Processor implements Observer {
 
     //This method will add a message to this processors buffer.
     //Other processors will invoke this method to send a message to this Processor
-    public void sendMessgeToMyBuffer(Message message){
-        messageBuffer.setMessage(message, this);
+    public void sendMessgeToMyBuffer(Message message, Processor sender){
+        messageBuffer.setMessage(message, sender);
     }
 
 
@@ -67,9 +67,7 @@ public class Processor implements Observer {
 					explore();
 				}
 				else {
-					messageBuffer.deleteObservers();
-					messageBuffer.addObserver((Processor)arg);
-					messageBuffer.setMessage(Message.ALREADY, this);
+					((Processor)arg).sendMessgeToMyBuffer(Message.ALREADY, this);
 				}
 				break;
 			
@@ -103,15 +101,11 @@ public class Processor implements Observer {
         //TODO: implement this method.
     	if (unexplored.size() > 0){
     		Processor child = removeFromUnexplored();
-    		messageBuffer.deleteObservers();
-    		messageBuffer.addObserver(child);
-    		messageBuffer.setMessage(Message.M, this);
+    		child.sendMessgeToMyBuffer(Message.M, this);
     	}
     	else{
     		if (parent != this){
-    			messageBuffer.deleteObservers();
-    			messageBuffer.addObserver(parent);
-    			messageBuffer.setMessage(Message.PARENT, this);
+    			parent.sendMessgeToMyBuffer(Message.PARENT, this);
     		}
     	}
     }

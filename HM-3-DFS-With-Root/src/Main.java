@@ -26,7 +26,7 @@ public class Main {
         //TODO: Send an initial message Message.M to this processor.
         try{
 	        if (root != null){
-	        	root.sendMessgeToMyBuffer(Message.M);
+	        	root.sendMessgeToMyBuffer(Message.M, root);
 	        	System.out.println("The root Processor has ID " + root.getID());
 	        	root.printSpanningTree();
 	        }
