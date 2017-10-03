@@ -5,11 +5,11 @@
 
 <h1>CLASS DIAGRAM</h1>
 
-![Alt text](Class_Diagram.jpeg?raw=true "Class Diagram")
+![Alt text](Class_diagram.jpeg?raw=true "Class Diagram")
 
 <h1>SEQUENCE DIAGRAM</h1>
 
-![Alt text](Sequence_Diagram.jpeg?raw=true "Sequence Diagram")
+![Alt text](Sequence_diagram.jpeg?raw=true "Sequence Diagram")
 
 <h1>How to work around with Code</h1>
 Create an execution Plan for a Processor in a file and save it.</br> 
