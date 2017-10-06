@@ -33,8 +33,7 @@ public class Algorithm {
 	public void sendEvent(Processor to) {
 		System.out.println("In Send Event of Processor " + P.getID());
 		computeEvent();
-		P.messageBuffer.addObserver(to);
-		P.messageBuffer.setMessage(new Message(MessageType.SEND, new VectorClock(P.getVectorClock())), P.getID());
+		to.sendMessageToMyBuffer(MessageType.SEND, P);		
 	}
 	
 

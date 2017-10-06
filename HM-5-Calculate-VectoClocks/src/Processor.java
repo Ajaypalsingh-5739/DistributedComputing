@@ -27,11 +27,18 @@ public class Processor implements Observer {
         messageBuffer = new Buffer();
         this.id = id; 
         this.vc = new VectorClock(totalProcesors);
+        this.messageBuffer.addObserver(this);
         this.store = new ArrayList<>();
         this.algo = new Algorithm(this);
     }
     
    
+    /**
+     * 
+     */
+    public void sendMessageToMyBuffer(MessageType msgType, Processor sender){
+    	messageBuffer.setMessage(new Message(msgType, new VectorClock(sender.getVectorClock())), sender.getID());
+    }
     
     /**
      * Overloaded method, called with single argument
