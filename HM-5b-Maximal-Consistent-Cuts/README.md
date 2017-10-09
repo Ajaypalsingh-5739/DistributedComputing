@@ -38,4 +38,4 @@ Input a cut for example 4 1 or 4 2
 
 <h1>SAMPLE OUTPUT</h1>
 
-![Alt text](Sample_output.png?raw=true "Sample Output")
+![Alt text](sample_output.png?raw=true "Sample Output")
