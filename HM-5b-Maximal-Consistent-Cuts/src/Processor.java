@@ -18,6 +18,7 @@ public class Processor implements Observer {
     VectorClock vc ; //This is the current vector clock 
     List<VectorClock> store;
     Algorithm algo;
+    VectorClock consistenCutVC;
     
     /**
      * Initializes the processor with id, children and unexplored lists. Adds himself in the observers list.
@@ -27,6 +28,7 @@ public class Processor implements Observer {
         messageBuffer = new Buffer();
         this.id = id; 
         this.vc = new VectorClock(totalProcesors);
+        this.consistenCutVC = new VectorClock(totalProcesors);
         this.messageBuffer.addObserver(this);
         this.store = new ArrayList<>();
         this.algo = new Algorithm(this);

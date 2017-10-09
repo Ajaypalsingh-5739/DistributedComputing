@@ -54,11 +54,15 @@ public class Main {
 		System.out.println("Enter the cut for the processors");
 		cut = sc.nextLine();
 		String[] cuts =  cut.split(" ");
+		List<Integer> maxConCut = new ArrayList<>();
 		List<Integer> cutsList = new ArrayList<>(Arrays.asList(cuts).stream().map(Integer::parseInt).collect(Collectors.toList()));
+		int i = 0;
 		for (Processor P : processors){
 			P.sendMessgeToProcessor(MessageType.CUT, cutsList);
+			maxConCut.add(P.consistenCutVC.vc[i]);
+			i++;
 		}
-		
+		System.out.println("Maximal Consistent Cut = " + maxConCut);
 	}
 
 }

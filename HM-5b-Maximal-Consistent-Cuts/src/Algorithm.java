@@ -52,8 +52,9 @@ public class Algorithm {
 			int returnVal = vectorClockFromCuts.compareTo(temp);
 			if (returnVal == 0){
 				status = true;
-				System.out.println("Maximum Consistent Cut at Processor " + P.getID() + " = ");
+				System.out.println("Maximum Consistent Cut incident at Processor " + P.getID() + " = ");
 				temp.printClock();
+				P.consistenCutVC = temp;
 			}
 			index--;
 		}
