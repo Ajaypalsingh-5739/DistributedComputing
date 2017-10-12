@@ -110,7 +110,7 @@ public class Processor implements Observer {
      * @param fromChannel channel where marker has arrived
      * @return true if this is the first marker false otherwise
      */
-    public boolean isFirstMarker(Buffer fromChannel) {
+    public boolean isFirstMarker() {
         //TODO: Implement this method
         //[ Hint : Use the channelMarkerCount]
     	if (this.markerCount == 0){
@@ -131,7 +131,7 @@ public class Processor implements Observer {
             //TODO: homework Record from Channel as Empty
             
             //TODO: add logic here so that if the marker comes back to the initiator then it should stop recording
-            if (isFirstMarker(fromChannel)) {
+            if (isFirstMarker()) {
             	this.markerCount = 1;
             	recordMyCurrentState();
                 recordChannelAsEmpty(fromChannel);

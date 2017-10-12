@@ -121,13 +121,6 @@ public class Algorithm {
         System.out.println("Doing some computation on " + p.getID());
     }
 
-    /**
-     *
-     * @param to processor to which message is sent
-     * @param channel the incoming channel on the to processor that will receive this message
-     */
-    public void send(Processor to, Buffer channel) {
-        to.sendMessgeTo(null, channel); // ALGORITHM
-    }
+   
 
 }

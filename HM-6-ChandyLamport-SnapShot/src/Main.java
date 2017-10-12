@@ -69,6 +69,7 @@ public class Main {
 				executor.submit(sch3);
 //				executor.shutdown();
 				//initiate snapshot from processor 1
+				Thread.sleep(500);
 		        processor1.initiateSnapShot();
 		        executor.shutdown();
 		        executor.awaitTermination(Integer.MAX_VALUE, TimeUnit.SECONDS);
