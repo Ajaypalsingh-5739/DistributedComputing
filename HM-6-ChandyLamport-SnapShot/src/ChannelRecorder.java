@@ -37,8 +37,10 @@ public class ChannelRecorder extends Thread{
 	        	while(!Thread.currentThread().isInterrupted()){
 			        	if (channel.getTotalMessageCount() > currentIndex+1){
 			        		currentIndex++;
-			        		recordedMessagesSinceMarker.add(channel.getMessage(currentIndex));
-			        		channelState.put(channel, recordedMessagesSinceMarker);
+			        		if (channel.getMessage(currentIndex).getMessageType().equals(MessageType.ALGORITHM)){
+				        		recordedMessagesSinceMarker.add(channel.getMessage(currentIndex));
+				        		channelState.put(channel, recordedMessagesSinceMarker);
+			        		}
 			        	}
 			        }
 	        }

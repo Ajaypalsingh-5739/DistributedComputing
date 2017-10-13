@@ -20,6 +20,10 @@ public class Buffer extends Observable {
         this.messages = new ArrayList<>();
     }
 
+    public List<Message> getMessages(){
+    	return this.messages;
+    }
+    
     /**
      * Creates empty buffer
      */

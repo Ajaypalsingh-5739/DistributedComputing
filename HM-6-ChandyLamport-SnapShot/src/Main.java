@@ -73,6 +73,7 @@ public class Main {
 		        processor1.initiateSnapShot();
 		        executor.shutdown();
 		        executor.awaitTermination(Integer.MAX_VALUE, TimeUnit.SECONDS);
+//		        executor.shutdownNow();
 		        if(executor.isShutdown()){
 		        	printProcessorSnapShot(processor1);
 					printProcessorSnapShot(processor2);

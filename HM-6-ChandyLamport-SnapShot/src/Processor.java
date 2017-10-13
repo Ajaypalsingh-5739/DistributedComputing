@@ -132,6 +132,7 @@ public class Processor implements Observer {
             
             //TODO: add logic here so that if the marker comes back to the initiator then it should stop recording
             if (isFirstMarker()) {
+            	System.out.println("Marker Message Receieved from Channel C:"+fromChannel.getLabel());
             	this.markerCount = 1;
             	recordMyCurrentState();
                 recordChannelAsEmpty(fromChannel);
@@ -141,12 +142,19 @@ public class Processor implements Observer {
                 this.getInChannels().stream().filter(channel-> channel!=fromChannel).forEach(channel-> channerRecorders.put(channel, new ChannelRecorder(channel, channelState)));
                 //TODO: homework: Trigger the recorder thread from this processor so that it starts recording for each channel
                 this.channerRecorders.forEach( (channel, recorder)-> recorder.start() );
+                try {
+					Thread.sleep(6000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
                 // send marker message to all outgoing channels.
                 Message m = new Message(MessageType.MARKER);
                 m.setFrom(this);
                 this.getOutChannels().forEach(channel-> this.sendMessgeTo(m, channel));
 
             } else {
+            	System.out.println("Duplicate Marker Message Receieved from Channel C:"+fromChannel.getLabel());
                 //Means it isDuplicateMarkerMessage.
                 //TODO: Homework Stop the recorder thread.
             	ChannelRecorder recorder = channerRecorders.get(fromChannel);
@@ -160,7 +168,8 @@ public class Processor implements Observer {
         }
         else{
             if (message.getMessageType().equals(MessageType.ALGORITHM)) {
-                System.out.println("Processing Algorithm message....");
+            	Buffer fromChannel = (Buffer) observable;
+                System.out.println("Processing Algorithm message received from channel C:"+fromChannel.getLabel());
                 num++;
             }  //There is no other type
            
