@@ -43,6 +43,7 @@ public class Main {
 	public static void printLeaders(List<Processor> processors){
 		//All leaders were already verified
 		int leaderID = processors.size();
+		//this loop verifies that every processor has the correct leader elected to it
 		for (Processor p: processors){
 			if (p.getLeaderID()  != leaderID){
 				System.out.println("Processor P:" +p.getID()+" does not have the correct leader");
